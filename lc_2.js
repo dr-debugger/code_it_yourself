@@ -13,7 +13,7 @@ function ListNode(val, next) {
  * @param {*} l1
  * @param {*} l2
  * @description this approach might work but it will failed with big integers
- * and it also takes 0(n^2) time complexity
+ * and it also takes 0(max(m, n, r)) time complexity
  * @returns the sum of two linked list
  */
 const addTwoNumbers = function (l1, l2) {
