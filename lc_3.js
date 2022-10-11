@@ -6,14 +6,24 @@
 const lengthOfLongestSubstring = function (s) {
   let result = 0;
   let max = 0;
-  let stack = [];
+  let stack = new Array();
 
   const stringArr = s.split("");
 
-  for (let i = 0; i < stringArr.length; i++) {}
+  for (let i = 0; i < stringArr.length; i++) {
+    if (stack.includes(stringArr[i])) {
+      max = stack.length;
+      result = max > result ? max : result;
+      stack.length = 0;
+    }
+    stack.push(stringArr[i]);
+  }
 
-  return result > max ? result : max;
+  return result;
 };
+/**
+ * time complexity = 0(n^2)
+ */
 
 // 🚩 test
-console.log(lengthOfLongestSubstring("pwwkew"));
+console.log(lengthOfLongestSubstring("abcabcbb"));
