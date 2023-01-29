@@ -22,7 +22,7 @@ const lengthOfLongestSubstring = function (s) {
   return result;
 };
 /**
- * time complexity = 0(n^2)
+ * time complexity = O(n^2)
  */
 
 // 🚩 test
