@@ -19,15 +19,12 @@ int sumEveryDiaognal(vector<vector<int>> arr, string str){
     return res;
 };
 
-
-
 int diagonalDifference(vector<vector<int>> arr){
     int res_1 = sumEveryDiaognal(arr, "TLtoBR");
     int res_2 = sumEveryDiaognal(arr, "BLtoTR");
 
     return abs(res_1 - res_2);
 }
-
 
 int main(){
   int result = diagonalDifference({{1,2,3}, {4,5,6}, {9,8,9}});
