@@ -1,9 +1,38 @@
 #include<iostream>
 #include<string>
+#include<cmath>
 using namespace std;
 
+int pageCount(int n, int p) {
+  if(p == 1)
+    return 0;
+  else if(n-p == 1 && n %2 == 0)
+    return 1;
+  else if(n-p < p)
+    return floor((n - p) / 2);
+  else
+    return floor(p / 2);
+
+  // int middle = floor(n / 2);
+
+  // if(middle % 2 == 0){
+  //   if(p >= middle)  
+  //     ceil((double)(n - p) / 2);
+  //   else
+  //     return floor(p / 2);
+  // }
+
+  // if(middle % 2 != 0){
+  //   if(p <= middle)
+  //     return floor(p / 2);
+  //   else
+  //     return ceil((double)(n - p) / 2);
+  // }
+}
+
 int main(){
-  
+  int page = pageCount(6, 5);
+  cout << page;
   return 0;
 }
 
