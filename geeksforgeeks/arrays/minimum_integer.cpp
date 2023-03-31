@@ -8,14 +8,15 @@ using namespace std;
 
 int minimumInt(int N, vector<int> &A){
 
-   long long sum = 0;
-  for (int i = 0; i < A.size(); i++)
+  long long size = A.size();
+
+  long long sum = 0;
+  for (int i = 0; i < size; i++)
   {
       sum += A[i];
   }
 
   long long mini = INT_MAX;
-  long long size = A.size();
         
   for (int i = 0; i < size; i++)
   {
