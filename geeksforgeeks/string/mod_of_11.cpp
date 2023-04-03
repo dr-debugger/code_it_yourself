@@ -9,7 +9,7 @@ int xmod11(string x){
   long long oddTotal = 0;
 
   for (int i = 0; i < x.length(); i++){
-    int val = x[i] - '0';
+    int val = x[i] - '0'; // converting string to in
     if(i % 2 == 0){
       oddTotal += val;
     }else{
@@ -35,5 +35,7 @@ int main(){
 
 /**
  * @brief https://practice.geeksforgeeks.org/problems/aa8c89caad6b5c3a76ba5e6d65454f77aac3f3543526/1?utm_source=geeksforgeeks&utm_medium=newui_home&utm_campaign=potd
- * 
+ *
+ * (Total of even indexes - total of odd indexes) % 11;
+ *
  */
