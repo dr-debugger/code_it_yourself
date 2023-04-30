@@ -31,7 +31,7 @@ void calculateAns(int row, int column, vector<vector<int>> &ans, vector<vector<c
 
     int i = current.first, j = current.second;
 
-    // check if boundaries mathed
+    // check if boundaries matched
     // check if not visited [if value > -1 then its visited, otherwise not] earlier
     // and will consider only, if the value is either 'H' or '.'
 
