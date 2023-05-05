@@ -58,4 +58,12 @@ int main(){
  * @brief
  * https://practice.geeksforgeeks.org/problems/111fb97b983399c0ee9f34b7bae18ac76bf6f07a/1?utm_source=geeksforgeeks&utm_medium=newui_home&utm_campaign=potd
  *
+ * Algo:
+ * -> first we have to sort the array.
+ * -> then we have to make a temporary storage where we can store the maximum value for all elements to its right
+ * -> now loop through the list
+ * -> now apply binary search from left of the every index of sorted array and check the given condition
+ * -> if condition true, then the maximum value for that index we can get from the temporary storage
+ * -> now we have to check if any higher value left on the right side or not.
+ * -> if condition doesnt match then we have to traverse to the left side of current index;
  */
