@@ -27,11 +27,6 @@ bool makeChanges(int N, int K, int target, vector<int> &coins)
 
 int main()
 {
-
-  // vector<int> c = {1, 5, 7};
-
-  // int a = countCoin(c, 18);
-  // cout << a;
   return 0;
 }
 
