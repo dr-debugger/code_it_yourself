@@ -31,13 +31,6 @@ int LargButMinFreq(int arr[], int n)
     }
       ++itr;
   }
-  
-
-  // for(auto x: m){
-  //   if(x->second < freq){
-  //     res = x.first;
-  //   }
-  // }
 
   return res;
 }
