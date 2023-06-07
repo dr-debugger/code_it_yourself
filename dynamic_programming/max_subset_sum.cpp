@@ -19,7 +19,7 @@ long long dp(int size, vector<int> &arr, int index, int indication, vector<vecto
   {
     b = dp(size, arr, index + 1, 0, memo);
   }
-  a = arr[index] + dp(size, arr, index + 1, 1, memo);
+  a = arr[index] + dp(size, arr, index + 1, 1, memo); // taking the index
 
   // we will put the maximum value for any given index in our memoize list
   memo[index][indication] = max(a, b);
