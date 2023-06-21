@@ -27,7 +27,7 @@ int distributeTicket(int N, int K)
     {
       if ((last - K) <= first)
       {
-        lastCount = first; // on second turn item will be deleting from last
+        lastCount = first; // on second turn item will be deleted from last
       }
       last -= K;
     }
