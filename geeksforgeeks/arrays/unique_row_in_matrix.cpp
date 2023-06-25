@@ -37,3 +37,12 @@ int main()
 
   return 0;
 }
+
+/**
+ * @brief
+ * https://practice.geeksforgeeks.org/problems/unique-rows-in-boolean-matrix/1
+ * 
+ * TC: O(n * m)
+ * SC: O(n * m)
+ *
+ */
