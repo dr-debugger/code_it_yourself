@@ -36,21 +36,33 @@ int countCoin(vector<int> &coins, int target, map<int, int> &m)
   return ans;
 }
 
+int count(vector<int> &coins, int target)
+{
+  map<int, int> m;
+  int minimumCoins = countCoin(coins, target, m);
+
+  if(minimumCoins == INT_MAX)
+    return -1;
+
+  return minimumCoins;
+}
+
 int main()
 {
-
-  map<int, int> m;
-  vector<int> c = {1, 5, 7};
-
-  int a = countCoin(c, 18, m);
-  cout << a;
+  vector<int> c = {2, 5, 7};
+  int res = count(c, 18);
+  cout << res;
 
   return 0;
 }
 
 /**
  * @Ques
- * Given an integer array of coins[ ] of size N representing different types of currency and an integer sum, The task is to find the number of ways to make sum by using different combinations from coins[]. you can use same coin multiple times;
+ * 
+ * Given an integer array of coins[ ] of size N representing different types of currency and an integer sum.
+ * The task is to find the minimum number of coin(s) required to make sum by using different combinations from coins[].
+ * If sum is not possible to make, return -1;
+ * You can use same coin multiple times;
  *
  *
  */
