@@ -69,7 +69,7 @@ int main(){
 
 /**
  * @brief
- * https://leetcode.com/problems/3sum/solutions/3109452/c-easiest-beginner-friendly-sol-set-two-pointer-approach-o-n-2-logn-time-and-o-n-space/
+ * https://leetcode.com/problems/3sum/description/
  *
  *
  * TC: O(n^2)
