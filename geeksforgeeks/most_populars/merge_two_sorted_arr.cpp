@@ -40,7 +40,7 @@ int main()
  * @brief
  * https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays-1587115620/1?utm_source=geeksforgeeks&utm_medium=newui_home&utm_campaign=potd
  *
- * Both arrays are sorted, so we need to swap previous elem of first arr with the first elem of second arr
+ * Both arrays are sorted, so we need to swap last elem of first arr with the first elem of second arr
  * 
  * TC: O(2 * log(m + n)) // second one is for sorting the two araays
  * SC: O(1)
