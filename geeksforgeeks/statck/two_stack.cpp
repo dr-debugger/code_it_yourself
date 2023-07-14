@@ -58,4 +58,6 @@ int main()
  * @brief
  * https://practice.geeksforgeeks.org/problems/implement-two-stacks-in-an-array/1?utm_source=geeksforgeeks&utm_medium=newui_home&utm_campaign=potd
  *
+ * TC: O(1)
+ * SC: O(1)
  */
