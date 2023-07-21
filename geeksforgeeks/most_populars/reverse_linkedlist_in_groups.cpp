@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stack>
 using namespace std;
 
 struct node
@@ -14,35 +15,47 @@ struct node
   }
 };
 
-struct node *reverseNodeGroup(struct node *res, int &count, int groupSize, struct node *head)
-{
-
-  if (head->next == NULL || count == groupSize)
-    return new node(head->data);
-
-  struct node *temp = reverseNodeGroup(res, ++count, groupSize, head->next);
-  if (res == NULL)
-  {
-    res = temp;
-  }
-  else
-  {
-    res->next = temp;
-  }
-
-  res = res->next;
-
-  return new node(head->data);
-}
-
 struct node *reverse(struct node *head, int k)
 {
-  struct node *res = NULL;
-  struct node *temp = res;
+  if (k == 1 || head == NULL)
+    return head;
 
-  int count = 1, groupSize = k;
+  node *res = new node(0);
+  node *dummy = res;
+  node *tempHead = head;
+  stack<int> s;
+  int count = 0;
 
-  
+  while (tempHead != NULL)
+  {
+    if (count == k)
+    {
+      while (!s.empty())
+      {
+        node *tempNode = new node(s.top());
+        s.pop();
+        res->next = tempNode;
+        res = res->next;
+      }
+
+      count = 0;
+    }
+
+    s.push(tempHead->data);
+    tempHead = tempHead->next;
+    count++;
+  }
+
+  // check if anything left in stack or not, cause "k" sometimes might not be multiplier of N
+  while (!s.empty())
+  {
+    node *tempNode = new node(s.top());
+    s.pop();
+    res->next = tempNode;
+    res = res->next;
+  }
+
+  return dummy->next;
 }
 
 int main()
@@ -56,3 +69,12 @@ int main()
       << res->next->data;
   return 0;
 }
+
+/**
+ * @brief
+ * https://practice.geeksforgeeks.org/problems/reverse-a-linked-list-in-groups-of-given-size/1?utm_source=geeksforgeeks&utm_medium=newui_home&utm_campaign=potd
+ *
+ * 
+ * TC: O(N + K)
+ * SC: O(K)
+ */
