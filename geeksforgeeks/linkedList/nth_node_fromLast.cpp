@@ -38,3 +38,9 @@ int main()
 
   return 0;
 }
+
+/**
+ * @brief
+ * https://practice.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
+ *
+ */
