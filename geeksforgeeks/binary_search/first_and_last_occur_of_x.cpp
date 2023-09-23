@@ -64,3 +64,12 @@ int main()
 
   return 0;
 }
+
+/**
+ * @brief
+ * https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x3116/1
+ * 
+ * TC: O(logN)
+ * SC: O(1)
+ *
+ */
