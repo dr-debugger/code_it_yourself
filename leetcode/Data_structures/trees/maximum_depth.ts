@@ -13,7 +13,6 @@ class TreeNode {
     this.right = right === undefined ? null : right;
   }
 }
-
 function maxDepth(root: TreeNode | null): number {
   if (root === null) return 0;
   const left = 1 + maxDepth(root.left);
