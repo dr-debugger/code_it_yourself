@@ -5,18 +5,18 @@
 
 const lengthOfLongestSubstring = function (s) {
   let result = 0;
-  let max = 0;
-  let stack = new Array();
+  const stack = new Array();
 
   const stringArr = s.split("");
 
   for (let i = 0; i < stringArr.length; i++) {
-    if (stack.includes(stringArr[i])) {
-      max = stack.length;
-      result = max > result ? max : result;
-      stack.length = 0;
+    const possibleIndex = stack.indexOf(stringArr[i]);
+    if (possibleIndex !== -1) {
+      stack.splice(0, possibleIndex + 1);
     }
+
     stack.push(stringArr[i]);
+    result = Math.max(stack.length, result);
   }
 
   return result;
