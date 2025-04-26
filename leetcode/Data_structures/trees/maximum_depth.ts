@@ -19,3 +19,5 @@ function maxDepth(root: TreeNode | null): number {
   const right = 1 + maxDepth(root.right);
   return Math.max(left, right);
 }
+
+export {};
